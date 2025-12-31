@@ -1,0 +1,75 @@
+---
+name: factorial2level
+title: Factorial Design - 2 Levels
+jrs: '1.1'
+
+items:
+  - name: coefficients
+    title: Regression Coefficients
+    type: Table
+    rows: 0
+    columns:
+      - name: term
+        title: Term
+        type: text
+      - name: estimate
+        title: Estimate
+        type: number
+      - name: se
+        title: Std. Error
+        type: number
+      - name: t
+        title: t-value
+        type: number
+      - name: p
+        title: p-value
+        type: number
+        format: zto,pvalue
+
+  - name: metrics
+    title: Model Fit Statistics
+    type: Table
+    rows: 0
+    columns:
+      - name: metric
+        title: Metric
+        type: text
+      - name: value
+        title: Value
+        type: number
+
+  - name: equation
+    title: Regression Equation
+    type: Table
+    rows: 0
+    columns:
+      - name: equation
+        title: Equation
+        type: text
+
+  - name: effects
+    title: Main Effects
+    type: Table
+    rows: 0
+    columns:
+      - name: factor
+        title: Factor
+        type: text
+      - name: effect
+        title: Effect Size
+        type: number
+      - name: low_level
+        title: Low Level
+        type: number
+      - name: high_level
+        title: High Level
+        type: number
+
+  - name: mainEffectsPlot
+    title: Main Effects Plot
+    type: Image
+    width: 600
+    height: 400
+    renderFun: .plot
+   
+...

@@ -1,0 +1,36 @@
+---
+title: Factorial Design
+name: FactorialDesign
+version: 1.0.5
+jms: '1.0'
+authors:
+  - Wanderley Xavier Pereira
+maintainer: Wanderley Xavier Pereira <wander.wx@gmail.com>
+date: '2025-01-21'
+type: R
+description: >
+  This module provides comprehensive tools for factorial design of experiments
+  (DOE). It includes analysis for 2-level and 3-level factorial designs,
+  calculating main effects, interaction effects, and regression coefficients.
+  Ideal for industrial experiments, optimization studies, and research
+  applications requiring systematic factor analysis.
+website: https://github.com/SeuUsuario/FactorialDesign
+analyses:
+  - title: Factorial Design - 2 Levels
+    name: factorial2level
+    ns: FactorialDesign
+    menuGroup: FactorialDesign
+    menuTitle: Factorial Design - 2 Levels
+    description: Analysis for 2-level factorial designs
+    category: analyses
+  - title: Factorial Design - 3 Levels
+    name: factorial3level
+    ns: FactorialDesign
+    menuGroup: FactorialDesign
+    menuTitle: Factorial Design - 3 Levels
+    description: Analysis for 3-level factorial designs
+    category: analyses
+usesNative: true
+minApp: 1.0.8
+
+...

@@ -1,0 +1,19 @@
+{
+  "name": "FactorialDesign",
+  "version": "1.0.2",
+  "description": "Factorial Design Module",
+  "analyses": [
+    {
+      "namespace": "factorial2level",
+      "name": "Factorial 2 Level",
+      "menuTitle": "Factorial 2 Level",
+      "menuGroup": "Design of Experiments"
+    },
+    {
+      "namespace": "factorial3level",
+      "name": "Factorial 3 Level",
+      "menuTitle": "Factorial 3 Level",
+      "menuGroup": "Design of Experiments"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+---
+name: factorial2level
+title: Factorial Design - 2 Levels
+menuGroup: FactorialDesign
+version: '1.0.5'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+      description: Input dataset
+      
+    - name: factors
+      title: Factors
+      type: Variables
+      suggested:
+        - nominal
+        - ordinal
+      permitted:
+        - factor
+        - numeric
+      description: Independent variables (factors) for the factorial design
+        
+    - name: response
+      title: Response
+      type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - numeric
+      description: Dependent variable (response) to be analyzed
+    
+    - name: mainEffects
+      title: Main Effects Plot
+      type: Bool
+      default: true
+      description: Display main effects plot
+
+    - name: interactionPlot
+      title: Interaction Plot
+      type: Bool
+      default: true
+      description: Display interaction effects plot
+      
+    - name: regressionTable
+      title: Regression Coefficients
+      type: Bool
+      default: true
+      description: Display regression coefficients table
+...

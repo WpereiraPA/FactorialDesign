@@ -1,0 +1,47 @@
+title: Factorial Design - 3 Levels
+name: factorial3level
+jus: '3.0'
+stage: 0
+compilerMode: aggressive
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Factor A (3 levels)
+        children:
+          - type: VariablesListBox
+            name: factorA
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Factor B (3 levels)
+        children:
+          - type: VariablesListBox
+            name: factorB
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Factor C (3 levels)
+        children:
+          - type: VariablesListBox
+            name: factorC
+            maxItemCount: 1
+            isTarget: true
+      - type: TargetLayoutBox
+        label: Dependent Variable
+        children:
+          - type: VariablesListBox
+            name: dep
+            maxItemCount: 1
+            isTarget: true
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: CheckBox
+        name: varEq
+      - type: CheckBox
+        name: showPlot
+      - type: CheckBox
+        name: showANOVA

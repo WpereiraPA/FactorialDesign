@@ -1,0 +1,59 @@
+---
+name: factorial3level
+title: Factorial Design - 3 Levels
+jrs: '1.1'
+
+items:
+    - name: anovaTable
+      title: ANOVA Table
+      type: Table
+      rows: 0
+      visible: (showANOVA)
+      columns:
+        - name: term
+          title: 'Source'
+          type: text
+        - name: df
+          title: 'df'
+          type: integer
+        - name: ss
+          title: 'Sum of Squares'
+          type: number
+        - name: ms
+          title: 'Mean Square'
+          type: number
+        - name: F
+          title: 'F'
+          type: number
+        - name: p
+          title: 'p'
+          type: number
+          format: zto,pvalue
+          
+    - name: effects
+      title: Main Effects Summary
+      type: Table
+      rows: 0
+      visible: (showANOVA)
+      columns:
+        - name: factor
+          title: 'Factor'
+          type: text
+        - name: levels
+          title: 'Levels'
+          type: text
+        - name: means
+          title: 'Means'
+          type: text
+        - name: effect
+          title: 'Effect Size'
+          type: number
+          format: zto,pvalue
+
+    - name: plot
+      title: Interaction Plot
+      type: Image
+      width: 500
+      height: 400
+      renderFun: .plot
+      visible: (showPlot)

@@ -1,0 +1,63 @@
+---
+name: factorial3level
+title: Factorial Design - 3 Levels
+menuGroup: FactorialDesign
+version: '1.0.5'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+
+    - name: factorA
+      title: Factor A (3 levels)
+      type: Variable
+      suggested:
+        - nominal
+        - ordinal
+      permitted:
+        - factor
+        - numeric
+
+    - name: factorB
+      title: Factor B (3 levels)
+      type: Variable
+      suggested:
+        - nominal
+        - ordinal
+      permitted:
+        - factor
+        - numeric
+
+    - name: factorC
+      title: Factor C (3 levels)
+      type: Variable
+      suggested:
+        - nominal
+        - ordinal
+      permitted:
+        - factor
+        - numeric
+
+    - name: dep
+      title: Dependent Variable
+      type: Variable
+      suggested:
+        - continuous
+      permitted:
+        - numeric
+
+    - name: varEq
+      title: Assume equal variances
+      type: Bool
+      default: true
+
+    - name: showPlot
+      title: Show interaction plot
+      type: Bool
+      default: true
+
+    - name: showANOVA
+      title: Show ANOVA table
+      type: Bool
+      default: true

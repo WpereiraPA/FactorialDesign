@@ -1,0 +1,23 @@
+Package: FactorialDesign
+Type: Package
+Title: Factorial Design Analysis for Jamovi
+Version: 1.0.5
+Date: 2025-01-21
+Authors@R: person("Wanderley Xavier", "Pereira", 
+    email = "wander.wx@gmail.com",
+    role = c("aut", "cre"))
+Description: Provides tools for analyzing factorial designs with 2 and 3 factors. 
+    Includes analysis of main effects, interactions, and regression coefficients 
+    for Design of Experiments (DOE). Suitable for industrial experiments, 
+    quality control, and research applications.
+License: GPL-3
+URL: https://github.com/WpereiraPA/FactorialDesign
+BugReports: https://github.com/WpereiraPA/FactorialDesign/issues
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.6)
+Imports:
+    jmvcore (>= 2.0),
+    R6,
+    ggplot2 (>= 3.0)
+RoxygenNote: 7.3.3
