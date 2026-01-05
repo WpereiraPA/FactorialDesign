@@ -180,7 +180,7 @@ factorial3levelBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
             super$initialize(
                 package = "FactorialDesign",
                 name = "factorial3level",
-                version = c(1,0,5),
+                version = c(1,0,0),
                 options = options,
                 results = factorial3levelResults$new(options=options),
                 data = data,

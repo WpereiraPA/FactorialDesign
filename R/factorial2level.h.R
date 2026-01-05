@@ -8,9 +8,7 @@ factorial2levelOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6C
         initialize = function(
             factors = NULL,
             response = NULL,
-            mainEffects = TRUE,
-            interactionPlot = TRUE,
-            regressionTable = TRUE, ...) {
+            mainEffects = TRUE, ...) {
 
             super$initialize(
                 package="FactorialDesign",
@@ -38,33 +36,19 @@ factorial2levelOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6C
                 "mainEffects",
                 mainEffects,
                 default=TRUE)
-            private$..interactionPlot <- jmvcore::OptionBool$new(
-                "interactionPlot",
-                interactionPlot,
-                default=TRUE)
-            private$..regressionTable <- jmvcore::OptionBool$new(
-                "regressionTable",
-                regressionTable,
-                default=TRUE)
 
             self$.addOption(private$..factors)
             self$.addOption(private$..response)
             self$.addOption(private$..mainEffects)
-            self$.addOption(private$..interactionPlot)
-            self$.addOption(private$..regressionTable)
         }),
     active = list(
         factors = function() private$..factors$value,
         response = function() private$..response$value,
-        mainEffects = function() private$..mainEffects$value,
-        interactionPlot = function() private$..interactionPlot$value,
-        regressionTable = function() private$..regressionTable$value),
+        mainEffects = function() private$..mainEffects$value),
     private = list(
         ..factors = NA,
         ..response = NA,
-        ..mainEffects = NA,
-        ..interactionPlot = NA,
-        ..regressionTable = NA)
+        ..mainEffects = NA)
 )
 
 factorial2levelResults <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
@@ -172,7 +156,7 @@ factorial2levelBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
             super$initialize(
                 package = "FactorialDesign",
                 name = "factorial2level",
-                version = c(1,0,5),
+                version = c(1,0,0),
                 options = options,
                 results = factorial2levelResults$new(options=options),
                 data = data,
@@ -188,12 +172,10 @@ factorial2levelBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Clas
 #' Factorial Design - 2 Levels
 #'
 #' 
-#' @param data Input dataset
-#' @param factors Independent variables (factors) for the factorial design
-#' @param response Dependent variable (response) to be analyzed
-#' @param mainEffects Display main effects plot
-#' @param interactionPlot Display interaction effects plot
-#' @param regressionTable Display regression coefficients table
+#' @param data .
+#' @param factors .
+#' @param response .
+#' @param mainEffects .
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$coefficients} \tab \tab \tab \tab \tab a table \cr
@@ -214,9 +196,7 @@ factorial2level <- function(
     data,
     factors,
     response,
-    mainEffects = TRUE,
-    interactionPlot = TRUE,
-    regressionTable = TRUE) {
+    mainEffects = TRUE) {
 
     if ( ! requireNamespace("jmvcore", quietly=TRUE))
         stop("factorial2level requires jmvcore to be installed (restart may be required)")
@@ -233,9 +213,7 @@ factorial2level <- function(
     options <- factorial2levelOptions$new(
         factors = factors,
         response = response,
-        mainEffects = mainEffects,
-        interactionPlot = interactionPlot,
-        regressionTable = regressionTable)
+        mainEffects = mainEffects)
 
     analysis <- factorial2levelClass$new(
         options = options,

@@ -176,16 +176,16 @@ factorial3levelClass <- if (requireNamespace("jmvcore", quietly = TRUE))
             geom_line(linewidth = 1.2) +
             geom_point(size = 3) +
             labs(
-              title = "Main Effects Plot",
+              title = "Estimated Effects",
               x = "Coded level",
               y = paste("Mean", dep),
               color = "Factor"
             ) +
             theme_minimal() +
             theme(
-              plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
-              axis.title = element_text(size = 12),
-              axis.text = element_text(size = 10),
+              plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),
+              axis.title = element_text(size = 14),
+              axis.text = element_text(size = 14),
               legend.position = "right"
             )
           

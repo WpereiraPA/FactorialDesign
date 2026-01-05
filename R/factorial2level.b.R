@@ -173,16 +173,16 @@ factorial2levelClass <- if (requireNamespace("jmvcore", quietly = TRUE))
           ggplot2::geom_line(linewidth = 1.2) +
           ggplot2::geom_point(size = 3) +
           ggplot2::labs(
-            title = "Main Effects Plot",
+            title = "Estimated Effects",
             x = "Coded level",
             y = paste("Mean", response),
             color = "Factor"
           ) +
           ggplot2::theme_minimal() +
           ggplot2::theme(
-            plot.title = ggplot2::element_text(hjust = 0.5, size = 14, face = "bold"),
-            axis.title = ggplot2::element_text(size = 12),
-            axis.text  = ggplot2::element_text(size = 10),
+            plot.title = ggplot2::element_text(hjust = 0.5, size = 15, face = "bold"),
+            axis.title = ggplot2::element_text(size = 13),
+            axis.text  = ggplot2::element_text(size = 12),
             legend.position = "right"
           )
         
