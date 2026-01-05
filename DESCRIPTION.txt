@@ -1,0 +1,25 @@
+Package: FactorialDesign
+Type: Package
+Title: Factorial Design of Experiments Analysis for Jamovi
+Version: 1.0.6
+Date: 2025-01-21
+Authors@R: 
+    person("Wanderley Xavier", "Pereira",
+           email = "wander.wx@gmail.com",
+           role = c("aut", "cre"))
+Description: Provides tools for analyzing factorial designs with 2-level and 
+    3-level factors using classical Design of Experiments (DOE) methodology.
+    The module estimates factor effects, interactions, and regression models 
+    automatically, offering visual plots and numerical results for industrial 
+    experiments, quality control, and research applications.
+License: GPL-3
+URL: https://github.com/WpereiraPA/FactorialDesign
+BugReports: https://github.com/WpereiraPA/FactorialDesign/issues
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.6)
+Imports:
+    jmvcore (>= 2.0),
+    R6,
+    ggplot2 (>= 3.0)
+RoxygenNote: 7.3.3
