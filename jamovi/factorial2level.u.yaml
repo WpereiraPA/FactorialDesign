@@ -26,7 +26,3 @@ children:
     children:
       - type: CheckBox
         name: mainEffects
-      - type: CheckBox
-        name: interactionPlot
-      - type: CheckBox
-        name: regressionTable
